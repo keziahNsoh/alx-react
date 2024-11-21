@@ -1,0 +1,21 @@
+{
+  "name": "task_3",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "start-dev": "webpack serve --open --port 8564"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2"
+  },
+  "devDependencies": {
+    "css-loader": "^6.0.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
