@@ -1,14 +1,25 @@
 import { Seq } from 'immutable';
 
-export function printBestStudents(grades) {
-  // Create a lazy sequence from the grades object
-  Seq(grades)
-    // Filter students with a score >= 70
-    .filter(student => student.score >= 70)
-    // Map the filtered students to a formatted name
-    .forEach(student => {
-      const firstName = student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1);
-      const lastName = student.lastName.charAt(0).toUpperCase() + student.lastName.slice(1);
-      console.log(`${firstName} ${lastName}`);
-    });
+export default function printBestStudents(object) {
+  const seq = Seq(object);
+
+  //   console.log(seq);
+  const filtered = seq.filter((student) => {
+    student.firstName.charAt(0).toUpperCase();
+    return student.score > 70;
+  });
+
+  function capFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  const JSObject = filtered.toJS();
+
+  Object.keys(JSObject).map((key) => {
+    JSObject[key].firstName = capFirstLetter(JSObject[key].firstName);
+    JSObject[key].lastName = capFirstLetter(JSObject[key].lastName);
+    return JSObject[key];
+  });
+
+  console.log(JSObject);
 }

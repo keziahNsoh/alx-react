@@ -1,7 +1,5 @@
-import { Map } from 'immutable';
+import { is } from 'immutable';
 
-// Function to check if two Maps are equal
-export function areMapsEqual(map1, map2) {
-  // Use the 'is' method from Immutable.js to check for deep equality
-  return map1.is(map2);
+export default function areMapsEqual(map1, map2) {
+  return is(map1, map2);
 }
