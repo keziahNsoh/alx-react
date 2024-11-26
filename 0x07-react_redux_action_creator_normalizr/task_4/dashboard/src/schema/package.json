@@ -1,0 +1,14 @@
+{
+  "name": "schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notifications.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
