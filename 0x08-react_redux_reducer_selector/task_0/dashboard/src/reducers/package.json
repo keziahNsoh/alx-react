@@ -1,0 +1,17 @@
+{
+  "name": "reducers",
+  "version": "1.0.0",
+  "main": "uiReducer.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "jest": "^29.7.0"
+  }
+}
